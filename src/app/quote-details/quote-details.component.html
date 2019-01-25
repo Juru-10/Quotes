@@ -1,0 +1,14 @@
+<h4>{{quote.ttl}}</h4>
+<p>{{quote.details}}</p>
+<span>
+  <div class="upvotes">
+    <button class="btn btn-success" (click)='upvote(true)'>Upvote</button>
+    <h6>Upvotes: {{quote.upvotes}}</h6>
+  </div>
+  <div class="downvotes">
+    <button class="btn btn-success" (click)='downvote(true)'>Downvote</button>
+    <h6>Downvotes: {{quote.downvotes}}</h6>
+  </div>
+</span>
+<p>This quote will be deleted in {{quote.deleteDate|dateCount}} days</p>
+<button class="btn btn-danger" (click)='quoteDelete(true)'>Delete</button>
