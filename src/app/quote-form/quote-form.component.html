@@ -2,17 +2,17 @@
   <div class="row">
     <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
       <div class="form-group">
-        <label for="ttl">Author</label>
-        <input type="text" class="form-control" id="ttl" [(ngModel)]="newQuote.ttl" name="ttl" #name="ngModel" required>
+        <label for="ttl">Quote Title</label>
+        <input type="text" class="form-control" id="ttl" [(ngModel)]="newQuote.ttl" name="ttl" #ttl="ngModel" required>
 
         <div [hidden]="ttl.valid||ttl.pristine" class="alert alert-danger">
-          <p>The Author is Required</p>
+          <p>The Title is Required</p>
         </div>
       </div>
 
       <div class="form-group">
         <label for="details">Quote</label>
-        <textarea class="form-control" id="details" rows="3" required></textarea>
+        <textarea class="form-control" id="details" rows="3" [(ngModel)]="newQuote.details" name="details" #details="ngModel" required></textarea>
 
         <div [hidden]="details.valid||details.pristine" class="alert alert-danger">
           <p>Details are Required</p>
@@ -20,8 +20,17 @@
       </div>
 
       <div class="form-group">
+        <label for="author">Author</label>
+        <input type="text" class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author="ngModel" required>
+
+        <div [hidden]="author.valid||author.pristine" class="alert alert-danger">
+          <p>Your Name is Required</p>
+        </div>
+      </div>
+
+      <div class="form-group">
         <label for="writer">Writer</label>
-        <input type="text" class="form-control" id="writer" [(ngModel)]="newQuote.write" name="write" #name="ngModel" required>
+        <input type="text" class="form-control" id="writer" [(ngModel)]="newQuote.writer" name="writer" #writer="ngModel" required>
 
         <div [hidden]="writer.valid||writer.pristine" class="alert alert-danger">
           <p>Your Name is Required</p>

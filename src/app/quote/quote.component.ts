@@ -9,11 +9,11 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-        new Quote(1, 'Life,', 'Take it easy or it takes you easy', '', '', new Date()),
-        new Quote(2, '', '', '', '', new Date()),
-        new Quote(3, '', '', '', '', new Date()),
-        new Quote(4, '', '', '', '', new Date()),
-        new Quote(5, '', '', '', '', new Date())
+        new Quote(1, 'Life,', 'Take it easy or it takes you easy', 'Me', 'Me', new Date(2019,0,10)),
+        // new Quote(2, '', '', '', '', new Date()),
+        // new Quote(3, '', '', '', '', new Date()),
+        // new Quote(4, '', '', '', '', new Date()),
+        // new Quote(5, '', '', '', '', new Date())
   ]
 
   addNewQuote(quote){
@@ -22,6 +22,14 @@ export class QuoteComponent implements OnInit {
     quote.deleteDate=new Date(quote.deleteDate)
     this.quotes.push(quote)
   }
+  //
+  // like(upvotes,index){
+  //   let upvotes+=1;
+  // }
+  //
+  // dislike(downvotes,index){
+  //   let downvotes+=1;
+  // }
 
   deleteQuote(isDelete,index){
     if (isDelete){

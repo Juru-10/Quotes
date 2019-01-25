@@ -1,14 +1,16 @@
 <h4>{{quote.ttl}}</h4>
 <p>{{quote.details}}</p>
-<span>
+The Author: <h6>{{quote.author}}</h6>
+The Writer: <h6>{{quote.writer}}</h6>
+<!-- <div>
   <div class="upvotes">
-    <button class="btn btn-success" (click)='upvote(true)'>Upvote</button>
+    <button class="btn btn-success" (click)='upvote($event)'>Upvote</button>
     <h6>Upvotes: {{quote.upvotes}}</h6>
   </div>
   <div class="downvotes">
-    <button class="btn btn-success" (click)='downvote(true)'>Downvote</button>
+    <button class="btn btn-success" (click)='downvote($event)'>Downvote</button>
     <h6>Downvotes: {{quote.downvotes}}</h6>
   </div>
-</span>
-<p>This quote will be deleted in {{quote.deleteDate|dateCount}} days</p>
+</div> -->
+<p>This quote's been written {{quote.deleteDate|dateCount}} days ago</p>
 <button class="btn btn-danger" (click)='quoteDelete(true)'>Delete</button>
