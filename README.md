@@ -25,9 +25,9 @@ The user can see the quote details like the quote creation time and its remainin
 This app may not meet all the desired services as you need but,
 It is still in Development and that will be soon resolved.
 
-##Behavior Driven Development (BDD).
+## Behavior Driven Development (BDD).
 
-###Behavior
+### Behavior
 
 **Our program should handle:**
 1. to write and save the the users' quotes and their details,
@@ -36,7 +36,7 @@ It is still in Development and that will be soon resolved.
 4. to show the list of all added quotes,
 5. to show each quote's details when required,
 
-###Input Example
+### Input Example
 
 **When it receives:**
 1. the user's click on the Add Quote button,
@@ -45,7 +45,7 @@ It is still in Development and that will be soon resolved.
 4. the user's click on the Upvote button,
 5. the user's click on the Downvote button,
 
-###Output Example
+### Output Example
 
 **It should return:**
 1. the quote on the list of all existing quotes.
