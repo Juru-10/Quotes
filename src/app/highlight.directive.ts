@@ -10,17 +10,17 @@ export class HighlightDirective {
 
   }
 
-  @HostListener("click") green(upvotes,index){
-    if(this.quote.upvotes==Math.max(this.quotes[index].upvotes)){
-    this.textDecor("green");
-    }
-  }
-
-  @HostListener("click") red(upvotes,index){
-    if(this.quote.upvotes==Math.max(this.quotes[index].upvotes)){
-    this.textDecor("red");
-    }
-  }
+  // @HostListener("click") green(upvotes,index){
+  //   if(this.quote.upvotes==Math.max(this.quotes[index].upvotes)){
+  //   this.textDecor("green");
+  //   }
+  // }
+  //
+  // @HostListener("click") red(upvotes,index){
+  //   if(this.quote.upvotes==Math.max(this.quotes[index].upvotes)){
+  //   this.textDecor("red");
+  //   }
+  // }
 
   private textDecor(action:string){
     this.elem.nativeElement.style.textDecoration=action;
