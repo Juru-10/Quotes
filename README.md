@@ -70,7 +70,7 @@ If you meet any issue, have questions, ideas or concerns;please contact me on
 ### License & Copyright
 
 *This project is licenced under the MIT license.*
-*Copyright (c) 2019*
+*Copyright (c) 2019*  ***Juru-10***
 **WeCode program under Moringa Project**
 
 ### Acknowledgments
