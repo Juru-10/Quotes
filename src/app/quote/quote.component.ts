@@ -9,9 +9,9 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-        new Quote(1, 'Life', 'Take life easy or it takes you easy.', 'Myself', 'Me', new Date(2019,0,10)),
-        new Quote(2, 'Time', 'Time is a part of life;take it preciously.', 'Myself', 'Me', new Date(2019,0,5)),
-        new Quote(3, 'Sunshine', 'When you can’t find the sunshine, be the sunshine.', 'Anonymous', 'Me', new Date(2019,0,1))
+        new Quote(1, 'Life', 'Take life easy or it takes you easy.', 'Myself', 'Me', 3,1,new Date(2019,0,10)),
+        new Quote(2, 'Time', 'Time is a part of life;take it preciously.', 'Myself', 'Me', 4,2,new Date(2019,0,5)),
+        new Quote(3, 'Sunshine', 'When you can’t find the sunshine, be the sunshine.', 'Anonymous', 'Me', 5,3,new Date(2019,0,1))
   ]
 
   addNewQuote(quote){

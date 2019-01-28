@@ -1,14 +1,17 @@
-<h1>My Quotes</h1>
+<h3>Create Desired Quotes</h3>
 <hr>
 <div class="container">
-  <div class="row">
+  <h1>Quotes</h1>
+  <div class="row" class="rcrd">
+    <h2>Create your Quote</h2>
     <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
   </div>
+  <h2 id="quotes">Created Quotes</h2>
+  <div class="qts" *ngFor='let quote of quotes;let i=index'>
 
-  <div *ngFor='let quote of quotes;let i=index'>
     <div class="row">
-      <h4 id="{{i}}" appStrikethrough>{{quote.ttl}}, written on {{quote.timerDate|date|uppercase}}</h4>
-      <button  class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
+      <h4 id="{{i}}" appHighlight>{{quote.ttl}}, written on {{quote.timerDate|date|uppercase}}</h4>
+      <button  class="btn btn-primary" (click)='toogleDetails(i)' id="dt">Toogle Details</button>
     </div>
     <div class="row" *ngIf="quote.showDetails">
       <app-quote-details [quote]='quote' (isDelete)='deleteQuote($event,i)'></app-quote-details>
@@ -16,4 +19,5 @@
   </div>
 
 </div>
+<hr>
 <h6 *ngIf='quotes.length > 5'>You have too many quotes</h6>

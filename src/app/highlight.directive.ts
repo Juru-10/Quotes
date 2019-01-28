@@ -1,22 +1,22 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
-  selector: '[appStrikethrough]'
+  selector: '[appHighlight]'
 })
-export class StrikethroughDirective {
+export class HighlightDirective {
 
-  constructor(private elem:ElementRef) {this.elem.nativeElement.style.textDecoration='line-through'; }
+  constructor(private elem:ElementRef) {}
 
-  // @HostListener("click") onClicks(){
-  //   this.textDecor("line-through")
-  // }
-  //
-  // @HostListener("dbclick") onDoubleClicks(){
-  //   this.textDecor("None")
-  // }
+  @HostListener("click") onClicks(){
+    this.textDecor("line-through")
+  }
 
-  // private textDecor(action:string){
-  //   this.elem.nativeElement.style.textDecoration=action;
-  // }
+  @HostListener("dbclick") onDoubleClicks(){
+    this.textDecor("None")
+  }
+
+  private textDecor(action:string){
+    this.elem.nativeElement.style.textDecoration=action;
+  }
 
 }
