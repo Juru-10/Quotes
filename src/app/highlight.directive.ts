@@ -7,18 +7,20 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 export class HighlightDirective {
 
   constructor(private elem:ElementRef) {
-    // if (quote.upvotes==Math.max(quote.upvotes)){
-    //   this.textDecor("line-through")
-    // }
+
   }
 
-  // @HostListener("click") onClicks(){
-  //   this.textDecor("line-through")
-  // }
-  //
-  // @HostListener("dbclick") onDoubleClicks(){
-  //   this.textDecor("None")
-  // }
+  @HostListener("click") green(upvotes,index){
+    if(this.quote.upvotes==Math.max(this.quotes[index].upvotes)){
+    this.textDecor("green");
+    }
+  }
+
+  @HostListener("click") red(upvotes,index){
+    if(this.quote.upvotes==Math.max(this.quotes[index].upvotes)){
+    this.textDecor("red");
+    }
+  }
 
   private textDecor(action:string){
     this.elem.nativeElement.style.textDecoration=action;

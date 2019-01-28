@@ -11,15 +11,12 @@ export class QuoteDetailsComponent implements OnInit {
   @Input() quote:Quote;
   @Output() isDelete = new EventEmitter<boolean>();
 
-  // public upvotes:number=0;
-  // public downvotes:number=0;
-
   upvote(upvotes){
-    this.upvotes=quote.upvotes+1;
+    this.quote.upvotes+=1;
   }
 
   downvote(downvotes){
-    quote.downvotes+=1;
+    this.quote.downvotes+=1;
   }
 
   quoteDelete(deleteIt:boolean){
