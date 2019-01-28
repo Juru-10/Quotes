@@ -1,5 +1,5 @@
 import { Directive, ElementRef, HostListener } from '@angular/core';
-// import { Quote } from './quote'
+import { Quote } from './quote'
 
 @Directive({
   selector: '[appHighlight]'
@@ -10,13 +10,13 @@ export class HighlightDirective {
 
   }
 
-  // @HostListener("click") green(upvotes,index){
+  // @HostListener() green(index){
   //   if(this.quote.upvotes==Math.max(this.quotes[index].upvotes)){
   //   this.textDecor("green");
   //   }
   // }
   //
-  // @HostListener("click") red(upvotes,index){
+  // @HostListener() red(index){
   //   if(this.quote.upvotes==Math.max(this.quotes[index].upvotes)){
   //   this.textDecor("red");
   //   }
