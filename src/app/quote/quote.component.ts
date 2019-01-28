@@ -9,27 +9,17 @@ import { Quote } from '../quote'
 export class QuoteComponent implements OnInit {
 
   quotes = [
-        new Quote(1, 'Life,', 'Take it easy or it takes you easy', 'Me', 'Me', new Date(2019,0,10)),
-        // new Quote(2, '', '', '', '', new Date()),
-        // new Quote(3, '', '', '', '', new Date()),
-        // new Quote(4, '', '', '', '', new Date()),
-        // new Quote(5, '', '', '', '', new Date())
+        new Quote(1, 'Life', 'Take life easy or it takes you easy.', 'Myself', 'Me', new Date(2019,0,10)),
+        new Quote(2, 'Time', 'Time is a part of life;take it preciously.', 'Myself', 'Me', new Date(2019,0,5)),
+        new Quote(3, 'Sunshine', 'When you can’t find the sunshine, be the sunshine.', 'Anonymous', 'Me', new Date(2019,0,1))
   ]
 
   addNewQuote(quote){
     let quoteLength=this.quotes.length;
     quote.id=quoteLength+1;
-    quote.deleteDate=new Date(quote.deleteDate)
+    quote.timerDate=new Date(quote.timerDate)
     this.quotes.push(quote)
   }
-  //
-  // like(upvotes,index){
-  //   let upvotes+=1;
-  // }
-  //
-  // dislike(downvotes,index){
-  //   let downvotes+=1;
-  // }
 
   deleteQuote(isDelete,index){
     if (isDelete){

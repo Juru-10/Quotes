@@ -38,11 +38,11 @@
       </div>
 
       <div class="form-group">
-        <label for="deleteIt"></label>
-        <input type="text" id="deleteIt" [(ngModel)]="newQuote.deleteDate" name="deleteDate" #deleteDate="ngModel" required>
+        <label for="timer">Date</label>
+        <input type="date" id="timer" class="form-control" [(ngModel)]="newQuote.timerDate" name="timerDate" #timerDate="ngModel" required>
 
-        <div [hidden]="deleteDate.valid||deleteDate.pristine" class="alert alert-danger">
-          <p>The Delete Date id Required</p>
+        <div [hidden]="timerDate.valid||timerDate.pristine" class="alert alert-danger">
+          <p>The due Date Required</p>
         </div>
       </div>
       <button type="Submit" class="btn btn-success btn-lg">Add Quote</button>

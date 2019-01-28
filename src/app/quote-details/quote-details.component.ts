@@ -11,22 +11,22 @@ export class QuoteDetailsComponent implements OnInit {
   @Input() quote:Quote;
   @Output() isDelete = new EventEmitter<boolean>();
 
-  // upvote(upvotes: any){
-  //   var upvotes=0;
-  //   this.upvotes+=1;
-  // }
-  //
-  // downvote(downvotes: any){
-  //   var downvotes=0;
-  //   this.downvotes+=1;
-  // }
+  public upvotes:number=0;
+  public downvotes:number=0;
+
+  upvote(upvotes){
+    this.upvotes+=1;
+  }
+
+  downvote(downvotes){
+    this.downvotes+=1;
+  }
 
   quoteDelete(deleteIt:boolean){
     this.isDelete.emit(deleteIt);
   }
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }
