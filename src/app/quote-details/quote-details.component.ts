@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter,  } from '@angular/core';
-import { Quote } from '../quote'
+import { Quote } from '../quote';
+import { HighlightDirective } from '../highlight.directive'
 
 @Component({
   selector: 'app-quote-details',
@@ -13,11 +14,7 @@ export class QuoteDetailsComponent implements OnInit {
 constructor() { }
   upvote(){
     this.quote.upvotes+=1;
-    this.total.push(this.quote.updates)
-    // if(this.quote.upvotes==Math.max(this.quotes[index].upvotes)){
-    //   this.elem.nativeElement.style.textDecoration='green';
-    //       // this.onHighlighter1();
-    //     }
+    // this.total.push(this.quote.upvotes)
   }
 
   downvote(){

@@ -8,7 +8,6 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
   @Input() quote:Quote;
-  // totalUp: number[]
   quotes = [
         new Quote(1, 'Life', 'Take life easy or it takes you easy.', 'Myself', 'Me', 0,0,new Date(2019,0,10)),
         new Quote(2, 'Time', 'Time is a part of life;take it preciously.', 'Myself', 'Me', 0,0,new Date(2019,0,5)),
@@ -22,9 +21,7 @@ export class QuoteComponent implements OnInit {
     quote.id=quoteLength+1;
     quote.timerDate=new Date(quote.timerDate)
     this.quotes.push(quote)
-    // this.totalUp.push(quote.upvotes)
-    // this.total.push(this.quote.updates)
-    // console.log(this.quotes.total)
+    this.total.push(this.quote.upvotes)
   }
 
   deleteQuote(isDelete,index){
@@ -40,17 +37,11 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
 
-  // highlighter(index){
-  //
-  //     if(this.quote.upvotes==Math.max(this.quotes[index].upvotes)){
-  //       this.onHighlighter1();
-  //     }
-  //
-  //     else if(this.quote.upvotes==Math.min(this.quotes[index].upvotes)){
-  //       this.onHighlighter2();
-  //     }
-  //
-  // }
+  highlight(index){
+    if(this.quotes[index].upvotes>this.quotes[index].upvotes){
+
+    }
+  }
 
   constructor() { }
 
