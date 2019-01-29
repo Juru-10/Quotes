@@ -14,7 +14,6 @@ export class QuoteDetailsComponent implements OnInit {
 constructor() { }
   upvote(){
     this.quote.upvotes+=1;
-    // this.total.push(this.quote.upvotes)
   }
 
   downvote(){
