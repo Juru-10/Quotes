@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter,  } from '@angular/core';
 import { Quote } from '../quote'
 
 @Component({
@@ -10,9 +10,14 @@ export class QuoteDetailsComponent implements OnInit {
 
   @Input() quote:Quote;
   @Output() isDelete = new EventEmitter<boolean>();
-
+constructor() { }
   upvote(){
     this.quote.upvotes+=1;
+    this.total.push(this.quote.updates)
+    // if(this.quote.upvotes==Math.max(this.quotes[index].upvotes)){
+    //   this.elem.nativeElement.style.textDecoration='green';
+    //       // this.onHighlighter1();
+    //     }
   }
 
   downvote(){
@@ -22,7 +27,7 @@ export class QuoteDetailsComponent implements OnInit {
   quoteDelete(deleteIt:boolean){
     this.isDelete.emit(deleteIt);
   }
-  constructor() { }
+
 
   ngOnInit() {}
 

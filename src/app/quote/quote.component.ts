@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input } from '@angular/core';
 import { Quote } from '../quote'
 
 @Component({
@@ -7,18 +7,24 @@ import { Quote } from '../quote'
   styleUrls: ['./quote.component.sass']
 })
 export class QuoteComponent implements OnInit {
-
+  @Input() quote:Quote;
+  // totalUp: number[]
   quotes = [
         new Quote(1, 'Life', 'Take life easy or it takes you easy.', 'Myself', 'Me', 0,0,new Date(2019,0,10)),
         new Quote(2, 'Time', 'Time is a part of life;take it preciously.', 'Myself', 'Me', 0,0,new Date(2019,0,5)),
         new Quote(3, 'Sunshine', 'When you can’t find the sunshine, be the sunshine.', 'Anonymous', 'Me', 0,0,new Date(2019,0,1))
   ]
 
+  total=[]
+
   addNewQuote(quote){
     let quoteLength=this.quotes.length;
     quote.id=quoteLength+1;
     quote.timerDate=new Date(quote.timerDate)
     this.quotes.push(quote)
+    // this.totalUp.push(quote.upvotes)
+    // this.total.push(this.quote.updates)
+    // console.log(this.quotes.total)
   }
 
   deleteQuote(isDelete,index){
@@ -33,6 +39,18 @@ export class QuoteComponent implements OnInit {
   toogleDetails(index){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
+
+  // highlighter(index){
+  //
+  //     if(this.quote.upvotes==Math.max(this.quotes[index].upvotes)){
+  //       this.onHighlighter1();
+  //     }
+  //
+  //     else if(this.quote.upvotes==Math.min(this.quotes[index].upvotes)){
+  //       this.onHighlighter2();
+  //     }
+  //
+  // }
 
   constructor() { }
 
