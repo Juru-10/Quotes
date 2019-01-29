@@ -24,4 +24,4 @@
 </div>
 <hr>
 <h6 *ngIf='quotes.length > 5'>You have too many quotes</h6>
-<p *ngFor='let quote of quotes'>{{quote.ttl}}, {{quote.upvotes}} upvotes</p><p *ngIf='highlight'>Highest Upvotes</p>
+<div *ngFor='let quote of quotes'>{{quote.ttl}}, {{quote.upvotes}} upvotes <p *ngIf='highlight'></p></div>

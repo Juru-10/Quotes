@@ -38,9 +38,7 @@ export class QuoteComponent implements OnInit {
   }
 
   highlight(index){
-    if(this.quotes[index].upvotes>this.quotes[index].upvotes){
-
-    }
+    this.quotes[index].upvotes > this.quotes[index].upvotes
   }
 
   constructor() { }
