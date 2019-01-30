@@ -12,7 +12,7 @@
     <div class="qts" *ngFor='let quote of quotes;let i=index'>
 
       <div class="">
-        <h4 id="{{i}}" highlight>{{quote.ttl}}, written on {{quote.timerDate|date|uppercase}}</h4>
+        <h4 id="{{i}}">{{quote.ttl}}, written on {{quote.timerDate|date|uppercase}}</h4>
         <button  class="btn btn-primary" (click)='toogleDetails(i)' id="dt">Toogle Details</button>
       </div>
       <div class="row" *ngIf="quote.showDetails">
@@ -25,3 +25,4 @@
 <hr>
 <h6 *ngIf='quotes.length > 5'>You have too many quotes</h6>
 <p *ngFor='let quote of quotes;let i=index'>{{quote.ttl}}, {{quote.upvotes}} upvotes</p>
+<!-- <button class="btn btn-primary" (click)='checking(index)'>Highest</button> -->

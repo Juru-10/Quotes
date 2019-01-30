@@ -21,7 +21,6 @@ export class QuoteComponent implements OnInit {
     quote.id=quoteLength+1;
     quote.timerDate=new Date(quote.timerDate)
     this.quotes.push(quote)
-    this.total.push(this.quote.upvotes)
   }
 
   deleteQuote(isDelete,index){
@@ -37,10 +36,11 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
 
-  highlight(upvotes,index){
-    return Math.max(this.quote.upvotes)
-  }
-
+  // checking(index){
+  //   if(this.quote.upvotes=Math.max(this.quotes[index].upvotes)){
+  //     alert(this.quote.ttl);
+  //   }
+  // }
   constructor() { }
 
   ngOnInit() {
