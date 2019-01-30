@@ -33,11 +33,16 @@ export class QuoteComponent implements OnInit {
     }
   }
 
+
+
   toogleDetails(index){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
 
   highlight(upvotes,index){
+
+    var ups:number[]=[this.quote.upvotes,];
+    console.log("ups");
     if(this.quotes[index].upvotes > this.quotes[index].upvotes){
 
     }
